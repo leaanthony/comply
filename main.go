@@ -31,6 +31,7 @@ func main() {
 
 	// If dir already exists, remove it
 	err = os.RemoveAll(licenseDir)
+	CheckError(err)
 
 	// Find license files in vendor directory
 	licenseFiles := []string{}
