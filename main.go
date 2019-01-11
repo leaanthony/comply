@@ -43,7 +43,7 @@ func main() {
 				localDir := filepath.Dir(path)[len(vendorDir)+1:]
 
 				dirToCreate := filepath.Join(licenseDir, localDir)
-				err = os.MkdirAll(dirToCreate, 0644)
+				err = os.MkdirAll(dirToCreate, 0755)
 				CheckError(err)
 
 				dstFile := filepath.Join(dirToCreate, f.Name())
